@@ -1,0 +1,413 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,700&family=Montserrat:wght@400;600;700&display=swap');
+
+/* Variables de color */
+:root {
+    --white-color: #F2F2F2;
+    --black-color: #262626;
+    --grey-color: #696969;
+    --lightgrey-color: #BFBFBF;
+    --gold-color: #F1A930;
+}
+
+/* Reinicio de base */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajustes generales */
+body {
+    background-color: var(--white-color);
+}
+
+h1, h2, h3, h4, p {
+    margin: 30px 20px 30px 20px;
+}
+
+ul {
+    margin: 30px 20px 10px 40px;
+}
+
+h1, h2, h3 {
+    line-height: 50%;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Lora', serif;
+    font-size: 2.0em;
+    font-weight: 200;
+    font-style: italic;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+section {
+    padding: 10px 0 20px 0;
+}
+
+p {
+    text-align: justify;
+    font-family: 'Lora', serif;
+    font-weight: 200;
+    color: #262626;
+}
+
+hr {
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+ul {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.91em;
+}
+
+span {
+    font-family: 'Lora', serif;
+    font-size: 1.1em;
+}
+
+mark {
+    color: var(--white-color);
+    background-color: var(--gold-color);
+}
+
+.subtitulos {
+    font-size: 1.5em;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0 0 5px 20px;
+    padding: 10px 0;
+    color: var(--black-color);
+}
+
+/* Espacio para contenido */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-color); 
+    width: 65%; 
+    height: auto; 
+    margin:auto;
+    box-shadow: 5px 5px 15px 5px rgb(0, 0, 0, 0.2);
+}
+
+/* Barra de navegación */
+ul.navbarlist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--white-color);
+  }
+  
+  li.opcion {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: var(--black-color);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: var(--lightgrey-color);
+    color: var(--white-color);
+  }
+
+  .active {
+    background-color: var(--grey-color);
+  }
+
+/* Encabezado de presentación */
+#home {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+#imagen {
+    display:inline-block;
+    background-image: url("../image/perfil1.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat:no-repeat;	
+    width:35%; 
+    height: 310px;   
+}
+
+#presentacion {
+    display:inline-block;
+    background-color: var(--black-color); 
+    width:65%; 
+    height: 310px;
+}
+
+#nombre {
+    color: var(--white-color);
+}
+
+#profesion, #descripcion {
+    color: var(--lightgrey-color);
+}
+
+#contacto {
+    color: var(--white-color);
+}
+
+ul>li.contacto {
+    font-family: 'Lora', serif;
+    font-size: 1.0em;
+    padding: 1px 0 0 5px;
+}
+
+ul>li.email {
+    list-style-type: "📧";
+}
+
+ul>li.direccion {
+    list-style-type: "🏠";
+}
+
+ul>li.telefono {
+    list-style-type: '📞';
+}
+
+/* Sección acerca de */
+#datos-personales {
+    background-color: var(--white-color);
+    width: 100%; 
+    height: auto;
+}
+
+.texto-principal:hover + .texto-oculto {
+    display: block;
+}
+
+.texto-oculto {
+    display: none;
+}
+
+/* Sección experiencia */
+#experiencia {
+    background-color: var(--white-color);
+    width:100%; 
+    height: auto;
+}
+
+#cliente1, #cliente3 {
+    color: var(--white-color);
+}
+
+#cliente2 {
+    color: var(--grey-color);
+}
+
+div.clientes {
+    margin: auto;
+    padding: 10px;
+    width: 94%;
+}
+
+.div-color1, .div-color3 {
+    background-color: var(--lightgrey-color);
+    border: 2px solid var(--lightgrey-color);
+}
+
+.div-color2 {
+    background-color: var(--white-color);
+    border: 2px solid var(--lightgrey-color);
+}
+
+ul>li.tarea {
+    color: var(--black-color);
+    list-style-type: '📌';
+}
+
+.tarea:hover + .texto-invisible {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.texto-invisible {
+    opacity: 0;  
+}
+
+/* Sección habilidades */
+#habilidades {
+    background-color: var(--white-color);
+    width: 100%; 
+    height: auto;
+}
+
+.listas-paralelas {
+    display: flex;
+    align-content: center;
+    margin: 0px auto;
+}
+
+ul>li.habilidades-destacadas {
+    list-style-type: none;
+}
+
+#barra-progreso1 {
+    background: var(--black-color);
+    border-radius: 13px;
+    height: 20px;
+    width: 300px;
+    padding: 3px;
+}
+
+#barra-progreso1:after {
+    content: '';
+    display: block;
+    background: var(--gold-color);
+    width: 95%;
+    height: 100%;
+    border-radius: 9px;
+}
+
+#barra-progreso2 {
+    background: var(--black-color);
+    border-radius: 13px;
+    height: 20px;
+    width: 300px;
+    padding: 3px;
+}
+
+#barra-progreso2:after {
+    content: '';
+    display: block;
+    background: var(--gold-color);
+    width: 85%;
+    height: 100%;
+    border-radius: 9px;
+}
+
+#barra-progreso3 {
+    background: var(--black-color);
+    border-radius: 13px;
+    height: 20px;
+    width: 300px;
+    padding: 3px;
+}
+
+#barra-progreso3:after {
+    content: '';
+    display: block;
+    background: var(--gold-color);
+    width: 85%;
+    height: 100%;
+    border-radius: 9px;
+}
+
+#barra-progreso4 {
+    background: var(--black-color);
+    border-radius: 13px;
+    height: 20px;
+    width: 300px;
+    padding: 3px;
+}
+
+#barra-progreso4:after {
+    content: '';
+    display: block;
+    background: var(--gold-color);
+    width: 85%;
+    height: 100%;
+    border-radius: 9px;
+}
+
+#barra-progreso5 {
+    background: var(--black-color);
+    border-radius: 13px;
+    height: 20px;
+    width: 300px;
+    padding: 3px;
+}
+
+#barra-progreso5:after {
+    content: '';
+    display: block;
+    background: var(--gold-color);
+    width: 80%;
+    height: 100%;
+    border-radius: 9px;
+}
+
+#barra-progreso6 {
+    background: var(--black-color);
+    border-radius: 13px;
+    height: 20px;
+    width: 300px;
+    padding: 3px;
+}
+
+#barra-progreso6:after {
+    content: '';
+    display: block;
+    background: var(--gold-color);
+    width: 85%;
+    height: 100%;
+    border-radius: 9px;
+}
+
+/* Sección formación */
+#formacion {
+    background-color: var(--white-color);
+    width:100%; 
+    height: auto;
+}
+
+.academia {
+    float:left;
+}
+
+#academia1 {
+    color: var(--white-color);
+}
+
+#academia2 {
+    color: var(--grey-color);
+}
+
+button {
+    float:left; 
+    margin-left: 10px;
+    padding: 2px 1px;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    border: 2px solid var(--black-color);
+}
+
+#info-extra {
+    display: none;
+}
+
+/* Autor */
+.copyright {
+    margin-bottom: 2px;
+}
+
+#copyright-tag {
+	font-size: 10px;
+	text-align: center;
+	position: relative;
+}
+
+.fa-heart {
+  color: tomato;
+}
